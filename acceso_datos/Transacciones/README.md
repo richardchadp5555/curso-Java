@@ -96,7 +96,7 @@ Es un hilo que simula el proceso de entrega de un pedido. Realiza las siguientes
 | `codenvio`   | INT        | Código del envío (autoincremental).    |
 | `codped`     | INT        | Código del pedido asociado.            |
 | `codrider`   | INT        | Código del rider asignado.             |
-| `terminado`  | DATE    | Refleja la fehca en la que se termina el envío. |
+| `terminado`  | DATE    | Refleja la fecha en la que se termina el envío. |
 
 ## Requisitos
 
