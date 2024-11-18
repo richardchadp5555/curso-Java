@@ -49,6 +49,16 @@ public class NotificarEntrega extends Thread {
 				pstmt.executeUpdate();
 				System.out.println("El rider " + codRider + " vuelve a estar disponible al haber terminado la entrega del pedido");
 			}
+			 // Actualizamo la tabla envios para marcar el envío como terminado
+	        String sqlActualizarEnvio = "UPDATE envios SET terminado = NOW() WHERE codped = ? AND codrider = ?";
+	        try (PreparedStatement pstmt = conexion.prepareStatement(sqlActualizarEnvio)) {
+	            pstmt.setInt(1, codPedido);
+	            pstmt.setInt(2, codRider);
+	            pstmt.executeUpdate();
+	            System.out.println("El envío del pedido " + codPedido + " ha sido marcado como terminado.");
+	        }
+			// Confirmamos cambios
+	      conexion.commit();
 		} catch (InterruptedException e) {
 			System.out.println("Hilo interrumpido " + e.getMessage());
 		} catch(SQLException e) {
