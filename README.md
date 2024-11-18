@@ -8,6 +8,14 @@ Este repositorio contiene ejercicios, ejemplos y proyectos realizados en el desa
   - **`conexionJDBC/`**: Ejercicio para practicar la conexión a una base de datos MySQL usando JDBC. Incluye:
     - **`src/`**: Código fuente de la clase `ConexionJDBC.java`.
     - **`sql_scripts/`**: Scripts SQL utilizados para configurar las bases de datos.
+  - **`transacciones/`**: Proyecto que implementa la gestión de transacciones en una base de datos MySQL. 
+    - **Descripción**: Este ejercicio simula la gestión de pedidos en un sistema de base de datos, permitiendo realizar operaciones como:
+      - Insertar pedidos.
+      - Registrar envíos con riders disponibles.
+      - Confirmar transacciones (`COMMIT`).
+      - Revertir cambios en caso de errores (`ROLLBACK`).
+      - Incluye la implementación de un hilo (`NotificarEntrega`) para simular el tiempo de entrega de un pedido y la actualización automática de la base de datos.
+    - **Tecnologías utilizadas**: Java, MySQL, JDBC.
 
 *(En el futuro se incluirán ejercicios y ejemplos para otras asignaturas como Programación de Procesos y Servicios.)*
 
