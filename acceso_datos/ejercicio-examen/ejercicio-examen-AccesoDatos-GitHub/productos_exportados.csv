@@ -1,0 +1,16 @@
+idproduto, nombre, stock, precio
+1,Producto A,10,10.0
+2,Producto B,30,15.5
+3,Producto C,20,7.75
+4,ProductoD,72,10.0
+5,ProductoE,60,20.25
+6,ProductoF,6,7.99
+7,ProductoG,50,15.5
+8,ProductoH,40,25.99
+9,ProductoI,20,5.75
+10,ProductoG,50,15.5
+11,ProductoH,40,25.99
+12,ProductoI,20,5.75
+13,ProductoX,100,15.0
+14,ProductoY,50,20.0
+15,ProductoZ,30,25.0
