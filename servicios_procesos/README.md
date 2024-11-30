@@ -128,7 +128,7 @@ Cocinero 1 está preparando el pedido: Pizza #1
 Camarero 2 tomó el pedido: Sopa #2
 Pedido agregado: Sopa #2
 Cocinero 1 terminó el pedido: Pizza #1
-...
+```
 
 ## 🛠️ Herramientas y tecnologías utilizadas
 
