@@ -89,6 +89,47 @@ El objetivo del ejercicio es aplicar conceptos de programación concurrente para
 
 ---
 
+### 🍽️ Sistema de Pedidos en Restaurante
+
+#### **Descripción del ejercicio**
+El ejercicio simula un sistema concurrente en un restaurante, donde:
+- **Camareros (Productores):** Generan pedidos y los colocan en un buffer compartido.
+- **Cocineros (Consumidores):** Retiran pedidos del buffer y los procesan.
+
+El buffer tiene una capacidad limitada, y los hilos trabajan de manera sincronizada para evitar problemas de concurrencia como:
+- **Condiciones de carrera.**
+- **Interbloqueos.**
+
+---
+
+#### **Propósito del ejercicio**
+Este ejercicio permite:
+- Comprender el patrón **productor-consumidor**.
+- Implementar sincronización de hilos con `wait()` y `notifyAll()`.
+- Simular sistemas de trabajo concurrentes.
+
+---
+
+#### **Estructura del código**
+| Componente        | Descripción                                                                 |
+|--------------------|-----------------------------------------------------------------------------|
+| `BufferPedidos`    | Clase que implementa un buffer sincronizado para almacenar pedidos.        |
+| `Camarero`         | Clase que representa un hilo productor, encargado de generar pedidos.      |
+| `Cocinero`         | Clase que representa un hilo consumidor, encargado de procesar pedidos.    |
+| `Principal`        | Clase principal que inicializa y ejecuta los hilos de camareros y cocineros.|
+
+---
+
+#### **Ejemplo de salida**
+```plaintext
+Camarero 1 tomó el pedido: Pizza #1
+Pedido agregado: Pizza #1
+Cocinero 1 está preparando el pedido: Pizza #1
+Camarero 2 tomó el pedido: Sopa #2
+Pedido agregado: Sopa #2
+Cocinero 1 terminó el pedido: Pizza #1
+...
+
 ## 🛠️ Herramientas y tecnologías utilizadas
 
 - **Lenguaje:** Java  
