@@ -164,7 +164,80 @@ Pepe va al baño.
 Antonio ha salido del baño.
 Pedro está esperando para entrar al baño.
 Pedro va al baño.
-...
+
+```
+### 🏦 Banco sincronizado
+
+#### **Descripción del ejercicio**
+El ejercicio simula una situación en la que un banco dispone de **dos cajeros automáticos** que pueden ser usados por varios clientes de forma concurrente. Para gestionar el acceso limitado, se utiliza un semáforo que controla cuántos hilos (clientes) pueden usar los cajeros simultáneamente. Los clientes realizan una transacción, esperan un tiempo aleatorio y luego liberan el cajero.
+
+#### **Propósito del ejercicio**
+El objetivo es:
+- **Controlar recursos limitados (cajeros):** Garantizar que no más de dos personas puedan usar los cajeros al mismo tiempo.
+- **Practicar el uso de semáforos:** Sincronizar el acceso concurrente a recursos compartidos.
+- **Simular concurrencia:** Mostrar cómo los hilos esperan, acceden y liberan un recurso compartido.
+
+---
+
+#### **Estructura del código**
+| Componente | Descripción                                                                 |
+|------------|-----------------------------------------------------------------------------|
+| `Principal`| Clase principal que crea e inicia los hilos que representan a los clientes.|
+| `Cliente`  | Clase que representa a cada cliente que usa un cajero, sincronizando su acceso mediante un semáforo.|
+
+---
+
+#### **Ejemplo de salida**
+```plaintext
+Cliente Antonio está esperando por un cajero.
+Cliente Laura está esperando por un cajero.
+Cliente Antonio está usando el cajero.
+Cliente Laura está usando el cajero.
+Cliente Antonio ha terminado su transacción y deja el cajero.
+Cliente Pepe está esperando por un cajero.
+Cliente Pepe está usando el cajero.
+Cliente Laura ha terminado su transacción y deja el cajero.
+Cliente Silvia está esperando por un cajero.
+```
+### 📚 Biblioteca sincronizada
+
+#### **Descripción del ejercicio**
+El ejercicio simula un sistema de biblioteca donde:
+- **Empleados (productores):** Colocan libros en un estante compartido.
+- **Clientes (consumidores):** Retiran libros del estante.
+
+El **estante** tiene una capacidad limitada y los empleados no pueden colocar más libros si está lleno, mientras que los clientes deben esperar si el estante está vacío. La sincronización se logra mediante el uso de `wait()` y `notifyAll()`.
+
+---
+
+#### **Propósito del ejercicio**
+Este ejercicio permite:
+- **Aplicar el modelo productor-consumidor:** Coordinar a los empleados (productores) y clientes (consumidores) para trabajar sobre un buffer compartido.
+- **Practicar el uso de `wait()` y `notifyAll()`:** Implementar la sincronización entre hilos.
+- **Controlar el acceso a recursos compartidos:** Simular un sistema concurrente eficiente.
+
+---
+
+#### **Estructura del código**
+| Componente    | Descripción                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| `Principal`   | Clase principal que inicializa los hilos de empleados y clientes.          |
+| `Empleado`    | Clase que representa a un productor que coloca libros en el estante.       |
+| `Cliente`     | Clase que representa a un consumidor que retira libros del estante.        |
+| `Estante`     | Buffer compartido que almacena libros y gestiona la sincronización.        |
+
+---
+
+#### **Ejemplo de salida**
+```plaintext
+El empleado Antonio ha agregado el libro libro nº1 al estante
+El cliente Richard ha retirado el libro libro nº1 del estante
+El empleado Adolfo ha agregado el libro libro nº2 al estante
+El cliente Belinda ha retirado el libro libro nº2 del estante
+El empleado Antonio ha agregado el libro libro nº3 al estante
+El cliente Richard ha retirado el libro libro nº3 del estante
+```
+
 
 ## 🛠️ Herramientas y tecnologías utilizadas
 
