@@ -129,6 +129,42 @@ Camarero 2 tomó el pedido: Sopa #2
 Pedido agregado: Sopa #2
 Cocinero 1 terminó el pedido: Pizza #1
 ```
+### 🚻 Control de baños con semáforo
+
+#### **Descripción del ejercicio**
+El ejercicio simula un sistema en el que varias personas comparten el uso de tres baños. Para gestionar el acceso limitado, se utiliza un semáforo que controla cuántos hilos (personas) pueden usar los baños simultáneamente. El programa produce mensajes como:
+- "Antonio está esperando para entrar al baño."
+- "Laura va al baño."
+- "Pepe ha salido del baño."
+
+#### **Propósito del ejercicio**
+El objetivo es:
+- **Controlar recursos limitados (baños):** Garantizar que no más de tres personas puedan acceder al baño al mismo tiempo.
+- **Practicar el uso de semáforos:** Implementar sincronización entre múltiples hilos.
+- **Simular la concurrencia:** Mostrar cómo los hilos esperan, acceden y liberan un recurso compartido.
+
+---
+
+#### **Estructura del código**
+| Componente        | Descripción                                                                |
+|--------------------|----------------------------------------------------------------------------|
+| `Principal`        | Clase principal que crea e inicia los hilos que representan a las personas.|
+| `Persona`          | Clase que representa a cada hilo que entra al baño, controlando su acceso mediante un semáforo.|
+
+---
+
+#### **Ejemplo de salida**
+```plaintext
+Antonio está esperando para entrar al baño.
+Laura está esperando para entrar al baño.
+Pepe está esperando para entrar al baño.
+Antonio va al baño.
+Laura va al baño.
+Pepe va al baño.
+Antonio ha salido del baño.
+Pedro está esperando para entrar al baño.
+Pedro va al baño.
+...
 
 ## 🛠️ Herramientas y tecnologías utilizadas
 
